@@ -2,6 +2,11 @@ import os
 # message import
 from django.contrib.messages import constants as messages
 
+# herokuapp
+import django_heroku
+import dj_database_url
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -12,9 +17,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'so2(!vq2#a*w&gyb2lgkprt4w3tln19nrr%dq_3rpoodtp2cup'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -69,15 +74,20 @@ WSGI_APPLICATION = 'btRE.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#       'NAME': 'btre',
+#        'USER': 'postgres',
+#        'PASSWORD': '0000',
+#        'HOST': 'localhost',
+#        # 'PORT': '5432',
+#    }
+# }
+
+# new DATABASES
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'btre',
-        'USER': 'postgres',
-        'PASSWORD': '0000',
-        'HOST': 'localhost',
-        # 'PORT': '5432',
-    }
+    'default': dj_database_url.config()
 }
 
 # Password validation
@@ -144,3 +154,5 @@ MESSAGE_TAGS = {
 # EMAIL_HOST_PASSWORD = ''
 # EMAIL_USE_TLS = True
 
+# new
+django_heroku.settings(locals())
