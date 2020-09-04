@@ -88,7 +88,17 @@ WSGI_APPLICATION = 'btRE.wsgi.application'
 
 # new DATABASES
 DATABASES = {
+<<<<<<< HEAD
     'default': dj_database_url.config()
+=======
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': '',
+#         'USER': '',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#     }
+# >>>>>>> a5b26b5c65dd27daaab78ca3e35dec07ca1ccca9
 }
 
 # Password validation
@@ -149,6 +159,7 @@ MESSAGE_TAGS = {
 }
 
 # email config
+<<<<<<< HEAD
 # EMAIL_HOST = ''
 # EMAIL_PORT =
 # EMAIL_HOST_USER = ''
@@ -157,3 +168,5 @@ MESSAGE_TAGS = {
 
 # new
 django_heroku.settings(locals())
+=======
+>>>>>>> a5b26b5c65dd27daaab78ca3e35dec07ca1ccca9
