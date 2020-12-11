@@ -1,9 +1,7 @@
 ### A Django real estate website.
-##### Python Django tutorial by @bradtraversy
 ###### Visit website at [link](https://hbtre.herokuapp.com/home)
 
 ---
-
 *Screenshots* 
 
 ![Screenshots](md-img/logout_home.png) | ![Screenshots](md-img/featured_listings.png) 
